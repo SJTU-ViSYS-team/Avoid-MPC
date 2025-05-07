@@ -1,0 +1,7 @@
+.vscode
+build
+thrust_calibrate_data
+*.swp
+*.bag
+*.bag.active
+data/*.json

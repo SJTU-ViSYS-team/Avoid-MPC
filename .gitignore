@@ -1,0 +1,16 @@
+.vscode
+*.so
+*.bag
+*.bag.active
+build
+data
+*.pdf
+so
+tools/render/build
+tools/render/dist
+*.egg-info
+output
+logs
+devel
+.catkin_tools
+thirdparty 

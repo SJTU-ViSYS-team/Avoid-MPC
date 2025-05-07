@@ -1,0 +1,84 @@
+mpc_T: 1.0
+mpc_dt: 0.033
+mpc_max_iter: 3
+use_drag_coefficient: 0
+nearest_point_num: 3
+# mpc cost weights
+goal_p_x: 50.0
+goal_p_y: 50.0
+goal_p_z: 100.0
+goal_yaw: 100.0
+goal_v_x: 1.0
+goal_v_y: 1.0
+goal_v_z: 1.0 
+goal_a_x: 0.0
+goal_a_y: 0.0
+goal_a_z: 0.0 
+
+path_p_x: 0.0
+path_p_y: 10.0
+path_p_z: 50.0
+path_yaw: 100.0
+path_v_x: 0.0
+path_v_y: 1.0   
+path_v_z: 1.0  
+path_a_x: 0.0
+path_a_y: 1.0   
+path_a_z: 1.0 
+
+u_a_x: 0.3  
+u_a_y: 0.3
+u_a_z: 0.5 
+u_yaw_dot: 1.0
+
+collide_lambda: 1.2
+# Dynamic Parameters    
+tau_a_x: 6.09837416
+tau_a_y: 6.21675029
+tau_a_z: 15.79816293
+tau_yaw_dot: 0. # For future use
+
+gain_a_x: 0.999999
+gain_a_y: 0.999999
+gain_a_z: 0.999999
+gain_yaw_dot: 1. # For future use
+
+speed: 10.0
+drone_radius: 0.5
+
+a_min_z: 5.0
+a_max_z: 15.0
+a_max_xy: 10.0
+a_max_yaw_dot: 10.0
+
+height: 1.5
+goal_x: 500
+safety_distance: 0.2
+
+# perception parameters
+fx: 320
+fy: 320
+cx: 320
+cy: 240
+resize_scale: 10
+pixel2meter: 1
+depth_max: 100 #meter
+depth_min: 0.1 #meter
+T_b_c: 
+  - [0,   0.00,  1.00,   0.05]
+  - [-1.00,  0.00 , 0,     0.0]
+  - [ 0.00,  -1.00, 0.00,  0.01]
+  - [ 0.0,   0.0,  0.0,    1.00]
+
+keyframe_th_dist: 0.1
+keyframe_th_count: 10
+max_frame_count: 100
+
+decay: 0.015 #second
+use_odom_est: true
+
+slow_down_kp: 0.3
+slow_down_kd: 0.3
+
+
+only_trust_vel: false
