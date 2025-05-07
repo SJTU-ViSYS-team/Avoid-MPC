@@ -31,6 +31,7 @@ struct Slown_Down_t {
     double yaw;
 };
 class BfCtrlFSM {
+public:
     State_Data_t state_data;
     Odom_Data_t odom_data;
     Imu_Data_t imu_data;

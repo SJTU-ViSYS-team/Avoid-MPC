@@ -43,7 +43,12 @@ make install
  source /opt/ros/noetic/setup.bash 
  catkin build
 ```
-### 2.3 Download Simulator
+### 2.3 Generate the MPC Shared Library 
+```
+ cd roswrapper/ros/avoid_mpc
+ python3 tools/mpc_obstacle_casadi.py
+```
+### 2.4 Download Simulator
 ```
 wget https://zenodo.org/records/15004895/files/Obstacles.zip
 unzip Obstacles.zip
