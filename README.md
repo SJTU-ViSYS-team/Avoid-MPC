@@ -30,14 +30,16 @@ cd avoid_mpc
 mkdir thirdparty && cd thirdparty
 git clone https://github.com/casadi/casadi.git -b 3.6.4
 mkdir build && cd build
-cmake ../casadi -DWITH_BUILD_IPOPT=ON -DWITH_BUILD_MUMPS=ON -DWITH_IPOPT=ON -DWITH_MUMPS=ON -DWITH_OPENMP=ON -DCMAKE_INSTALL_PREFIX=../../
+cmake ../casadi -DWITH_BUILD_IPOPT=ON -DWITH_BUILD_MUMPS=ON -DWITH_IPOPT=ON -DWITH_MUMPS=ON -DWITH_OPENMP=ON -DCMAKE_INSTALL_PREFIX=../
 make -j$(nproc)
 make install
 ```
 ### 2.2 Build Roswrapper
 ```
  sudo apt install python3-catkin-tools
- sudo apt install ros-noetic-mavros ros-noetic-mavros-extras
+ sudo apt install libeigen3-dev
+ sudo apt-get install libpcl-dev
+ sudo apt install ros-noetic-mavros ros-noetic-mavros-extras ros-noetic-pcl-conversions
  sudo apt install ros-noetic-tf2-sensor-msgs
  cd roswrapper/ros
  source /opt/ros/noetic/setup.bash 
@@ -45,7 +47,7 @@ make install
 ```
 ### 2.3 Generate the MPC Shared Library 
 ```
- cd roswrapper/ros/avoid_mpc
+ cd roswrapper/ros/src/avoid_mpc
  python3 tools/mpc_obstacle_casadi.py
 ```
 ### 2.4 Download Simulator
