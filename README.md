@@ -22,8 +22,11 @@ This framework offers a robust and streamlined alternative to complex map-based 
 ---
 
 ## 2. Installation
+### 2.1 Tested Environments
+This project has been tested under the following environments:
+> Ubuntu 20.04 + ROS Noetic
 
-### 2.1 Build CasADi
+### 2.2 Build CasADi
 
 ```bash
 cd avoid_mpc
@@ -34,7 +37,7 @@ cmake ../casadi -DWITH_BUILD_IPOPT=ON -DWITH_BUILD_MUMPS=ON -DWITH_IPOPT=ON -DWI
 make -j$(nproc)
 make install
 ```
-### 2.2 Build Roswrapper
+### 2.3 Build Roswrapper
 ```
  sudo apt install python3-catkin-tools
  sudo apt install libeigen3-dev
@@ -45,12 +48,13 @@ make install
  source /opt/ros/noetic/setup.bash 
  catkin build
 ```
-### 2.3 Generate the MPC Shared Library 
+### 2.4 Generate the MPC Shared Library 
 ```
+ pip3 install casadi
  cd roswrapper/ros/src/avoid_mpc
  python3 tools/mpc_obstacle_casadi.py
 ```
-### 2.4 Download Simulator
+### 2.5 Download Simulator
 ```
 wget https://zenodo.org/records/15004895/files/Obstacles.zip
 unzip Obstacles.zip
