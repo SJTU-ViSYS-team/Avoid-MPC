@@ -26,6 +26,7 @@ This framework offers a robust and streamlined alternative to complex map-based 
 ### 2.1 Build CasADi
 
 ```bash
+sudo apt install libmetis-dev gfortran
 cd avoid_mpc
 mkdir thirdparty && cd thirdparty
 git clone https://github.com/casadi/casadi.git -b 3.6.4
@@ -37,8 +38,7 @@ make install
 ### 2.2 Build Roswrapper
 ```
  sudo apt install python3-catkin-tools
- sudo apt install ros-noetic-mavros ros-noetic-mavros-extras
- sudo apt install ros-noetic-tf2-sensor-msgs
+ sudo apt install ros-noetic-mavros ros-noetic-mavros-extras ros-noetic-tf2-sensor-msgs
  cd roswrapper/ros
  source /opt/ros/noetic/setup.bash 
  catkin build
