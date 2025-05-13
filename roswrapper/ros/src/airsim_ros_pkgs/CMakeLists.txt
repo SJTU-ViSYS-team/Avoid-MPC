@@ -18,8 +18,7 @@ set(CXX_EXP_LIB "-nostdinc++ -I/usr/include/c++/8 -I/usr/include/x86_64-linux-gn
 set(RPC_LIB_INCLUDES " ${AIRSIM_ROOT}/external/rpclib/rpclib-2.3.0/include")
 set(RPC_LIB rpc) # name of .a file with lib prefix
 message(STATUS "found RPC_LIB_INCLUDES=${RPC_LIB_INCLUDES}")
-
-find_package(Eigen3 3 REQUIRED) # Recomand version 3.1.0
+find_package(Eigen3 3.1.0 REQUIRED)
 find_package(Boost REQUIRED)
 find_package(OpenCV REQUIRED)
 
@@ -84,7 +83,7 @@ catkin_package(
 include_directories(
   include
   ${catkin_INCLUDE_DIRS}
-  ${EIGEN3_INCLUDE_DIR}
+  ${EIGEN_INCLUDE_DIRS}
   ${AIRSIM_ROOT}/AirLib/include
   ${RPC_LIB_INCLUDES}
   ${AIRSIM_ROOT}/MavLinkCom/include
@@ -94,7 +93,7 @@ include_directories(
 )
 
 add_library(airsim_settings_parser src/airsim_settings_parser.cpp)
-target_link_libraries(airsim_settings_parser ${catkin_LIBRARIES} AirLib)
+target_link_libraries(airsim_settings_parser ${catkin_LIBRARIES} AirLib )
 
 add_library(airsim_ros src/airsim_ros_wrapper.cpp)
 add_dependencies(airsim_ros ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
