@@ -19,6 +19,12 @@ This framework offers a robust and streamlined alternative to complex map-based 
 
 📄 **[Read the full paper on arXiv](https://arxiv.org/abs/2503.10141)**
 
+Watch our demonstration videos:
+
+[**YouTube Video**](https://youtu.be/Uf_ceG64ZIY) 
+
+[**Bilibili Video**](https://www.bilibili.com/video/BV1iTstzUEFT/?share_source=copy_web&vd_source=a486d7defdbe65e19e2dbdab352ac816)
+
 ---
 
 ## 2. Installation
