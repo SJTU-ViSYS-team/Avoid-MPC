@@ -77,7 +77,7 @@ Start another terminal to run avoid-MPC:
 ```
 cd avoid_mpc/roswrapper/ros
 source devel/setup.bash
-roslaunch avoid_mpc mpc_obstacle_avoidance.launch
+roslaunch avoid_mpc mpc_obstacle_avoidance_sim.launch
 ```
 <p align="center">
   <img src="doc/demo.gif"/>
