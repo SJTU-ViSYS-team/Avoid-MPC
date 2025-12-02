@@ -92,10 +92,14 @@ roslaunch avoid_mpc mpc_obstacle_avoidance_sim.launch
 If you find this work useful in your research, please cite:
 
 ```
-@article{zhang2025mapless,
-  title={Mapless Collision-Free Flight via MPC using Dual KD-Trees in Cluttered Environments},
+@inproceedings{zhang2025mapless,
   author={Zhang, Linzuo and Hu, Yu and Deng, Yang and Yu, Feng and Zou, Danping},
-  journal={arXiv preprint arXiv:2503.10141},
-  year={2025}
-}
+  booktitle={2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, 
+  title={Mapless Collision-Free Flight via MPC using Dual KD-Trees in Cluttered Environments}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={19653-19660},
+  doi={10.1109/IROS60139.2025.11247753}}
+
 ```
